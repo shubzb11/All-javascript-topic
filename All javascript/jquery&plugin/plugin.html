@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Plug-In/countdown-time/css/flipTimer.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="Plug-In/countdown-time/js/jquery.flipTimer.js"></script>
+  </head>
+
+  <style>
+    body {
+      background-color: aliceblue;
+      text-align: center;
+      vertical-align: middle;
+      margin-top: 45vh;
+    }
+    h1 {
+      text-align: center;
+    }
+  </style>
+  <body>
+    <h1>Countdown Start........</h1>
+    <div class="flipTimer">
+      <div class="days"></div>
+      <div class="hours"></div>
+      <div class="minutes"></div>
+      <div class="seconds"></div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $(".flipTimer").flipTimer({
+          // count up or countdown
+          direction: "down",
+
+          // the target <a href="https://www.jqueryscript.net/time-clock/">date</a>
+          date: "April 20, 2023 08:30:30",
+
+          // callback works only with direction = "down"
+          callback: function () {
+            alert("comming soon....!");
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

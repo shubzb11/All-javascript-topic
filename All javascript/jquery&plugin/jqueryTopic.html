@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="jquery-3.6.4.min.js"></script> 
+    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+      //   $(document).ready(function () {    //its like defer ..
+      //     $("#colored-div").on({
+      //       click: function () {
+      //         $(this).css("background-color", "red");
+      //       },
+      //       mouseenter: function () {
+      //         $(this).css("background-color", "green");
+      //       },
+      //       mouseleave: function () {
+      //         $(this).css("background-color", "yellow");
+      //       },
+      //     });
+      //   });
+    </script>
+    <!-- <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        padding: 10px;
+        margin: 10px;
+      }
+      .red {
+        background-color: red;
+      }
+      .circle {
+        border-radius: 50%;
+      } -->
+    </style>
+  </head>
+  <body>
+    <!-- select html element -->
+    <!-- perform jquery function / action on selected element.... -->
+    <!-- $(selector).action();     jquery syntax -->
+
+    <!-- <p id="pra">This is p1</p>
+    <p class="black">This is p2</p>
+    <p class="black">This is p3</p> -->
+
+    <!-- // ######### event in jquery######// -->
+
+    <!-- <p id="pra">this is p tag</p>
+    <button id="btn">click</button><br /><br />
+    <div
+      id="colored-div"
+      style="background-color: aqua; height: 150px; width: 150px"
+    ></div> -->
+
+    <!-- // ######### effects in jquery######// -->
+
+    <!-- <p id="pra">this is p tag</p>
+    <button id="btn1">button1</button>
+    <button id="btn2">button2</button>
+    <br /><br />
+
+    <div
+      id="colored-div"
+      style="background-color: aqua; height: 150px; width: 150px"
+    >
+      <p>this is a p tag<a href="#" id="link" class="red">link</a></p>
+    </div>
+
+    <input type="text" id="input" placeholder="enter"></input> -->
+
+    <!-- add html element -->
+
+    <!-- before
+    <ul id="list">
+      prepend : <--pahla child  -->
+    <!-- <li>red</li>
+      <li>green</li>
+      <li>black</li>
+      append 
+    </ul> -->
+    <!--  after-->
+
+    <!-- class manipulate -->
+
+    <!-- <div id="box" class="box red"></div>
+    <button id="btn">click</button> -->
+
+    <!--#######traversuing HTML in jquery######-->
+
+<!-- <ul id="list">  
+   <li> 
+     <span id="span1">item1</span>
+  </li>
+   <li>  
+     <span id="span2">item2</span> 
+  </li>
+</ul>   -->
+
+<!-- <ul id="list">
+  <li>child1</li>
+  <li>child2</li>
+  <li id="item1">child3</li>
+  <li>child4</li>
+  <li id="item2">child5</li>
+  <li>child6</li>
+   
+</ul> -->
+
+    <!-- // #######conflict in jquery ######// -->
+
+    <!-- <p id="para">This is ap tag</p>
+    <button id="btn"> click me</button> -->
+
+
+
+    <script>
+      //   $(document).ready(function () {
+      //     alert("Document");
+      //   });    // to check jquery connet or not
+
+      //   $("p").hide();
+      //   $("#pra").hide();
+      //   $(".black").hide();
+      //   $("p.black").hide();
+
+      // ######### event in jquery######//
+
+      //   $("#btn").click(function () {
+      //     // alert("Please enter no:");  //click
+      //     // $("#pra").hide();
+      //     // $(this).hide();
+      //   });
+      //   $("#colored-div").mouseenter(function () {
+      //     $("#pra").hide(); //mouseenter
+      //   });
+
+      //   $("#colored-div").mouseleave(function () {
+      //     $("#pra").hide(); //mouseleave
+      //   });
+      //   $("#colored-div").hover(   //hover
+      //     function () {
+      //       $("#pra").hide();
+      //     },
+      //     function () {
+      //       $("#pra").show();
+      //     }
+      //   );
+
+      //on function
+      //   $("#colored-div").on({
+      //     click: function () {
+      //       $(this).css("background-color", "red");
+      //     },
+      //     mouseenter: function () {
+      //       $(this).css("background-color", "green");
+      //     },
+      //     mouseleave: function () {
+      //       $(this).css("background-color", "yellow");
+      //     },
+      //   });
+
+      // ######### effects in jquery######//
+
+      //   $("#btn1").click(function () {
+      //     $("#colored-div").hide(1000);
+      //   });
+      //   $("#btn2").click(function () {
+      //     $("#colored-div").show(2000);
+      //   });
+
+      //   $("#btn1").click(function () {
+      //     $("#colored-div").fadeOut(1000); //fade out/in
+      //   });
+      //   $("#btn2").click(function () {
+      //     $("#colored-div").fadeIn(2000);
+      //   });
+
+      //   $("#btn1").click(function () {
+      //     $("#colored-div").fadeTo(1000, 0.3); // fadeTo
+      //   });
+      //   $("#btn2").click(function () {
+      //     $("#colored-div").fadeIn(2000);
+      //   });
+
+      //   $("#btn1").click(function () {
+      //     $("#colored-div").slideUp(1000);   //slide up/down
+      //   });
+      //   $("#btn2").click(function () {
+      //     $("#colored-div").slideDown(2000);
+      //   });
+
+      // ######### Animation in jquery######//
+
+      // $("#btn1").click(function () {
+      //   $("#colored-div").animate(
+      //     {
+      //       opacity: "0.5",
+      //       height: "500px",       //animate
+      //       width: "50px",
+      //     },
+      //     5000
+      //   );
+      // });
+
+      // $("#btn2").click(function () {
+      //   $("#colored-div").stop();
+      // });
+
+      // $("#btn2").click(function () {    //callback
+      //   $("#colored-div").hide(3000, function () {
+      //     alert(" div is hidden ");
+      //   });
+      // });
+
+      // $("#btn1").click(function () {
+      //   //chaining use .multiple effect
+      //   $("#colored-div")
+      //     .css("background-color", "red")
+      //     .slideUp(2000)
+      //     .slideDown(1000)
+      //     .text("text");
+      // });
+
+      // #######Manipulating HTML in jquery######//
+
+      // $("#btn1").click(function () {
+      //   var txt = $("#colored-div").text();
+      //   alert(txt);
+      // });
+
+      // $("#btn1").click(function () {
+      //   var txt = $("#colored-div").text("happy birthday");
+      //   alert(txt);
+      // });
+
+      // $("#btn1").click(function () {
+      //   var txt = $("#colored-div").html();
+      //   alert(txt);
+      // });
+
+      // $("#btn1").click(function () {
+      //   var txt = $("#colored-div").html("<h1>this is h1</h1>");
+      //   alert(txt);
+      // });
+
+      // $("#btn1").click(function () {   //input get
+      //   var txt = $("#input").val();
+      //    alert(txt);
+      //  });
+
+      //$("#btn1").click(function () {   //input set
+      //  $("#input").val("shubham b");
+      //  });
+
+      // $("#btn1").click(function () {  //attribute get
+      // var value = $("#link").attr("href");
+      // alert(value);
+      //   });
+
+      //   $("#btn1").click(function () {  //attribute set
+      // $("#link").attr("class","blue");
+      // // alert(value);
+      //   });
+
+      //   $("#btn1").click(function () {  //attribute set multiple
+      // $("#link").attr({"class":"blue",
+      // "href" : "http://www.example.com",
+      //   });
+      // });
+
+      // add html element
+
+      // $("#list").append("<li>yellow</li>");
+      // $("#list").prepend("<li>yellow</li>");
+      // $("#list").after("<p>use of after</p> ");
+      // $("#list").before("<p>use of before</p>");
+      // $("#list").empty(); //childs gyb honga
+      // $("#list").remove(); //sab gyb honga
+
+      // manipulate class
+
+      // $("#btn").click(function () {
+      //   // $("#box").addClass("circle   black");
+      //   // $("#box").removeClass("red");
+      //   // $("#box").toggleClass("red circle");
+      //   var css = $("#box").css({
+      //     "background-color": "yellow",
+      //     border: "4px solid green",
+      //   });
+      //   alert(css);
+      // });
+
+      // $("#btn").click(function () {
+      //   var data = $("#box").innerWidth();//contet+padding
+      //   alert(data);
+      // });
+
+      // $("#btn").click(function () {
+      //   var data = $("#box").outerWidth();//contet+padding+border
+      //   alert(data);
+      // });
+
+      // $("#btn").click(function () {
+      //   var data = $("#box").outerWidth(true); //contet+padding+border + margin
+      //   alert(data);
+      // });
+
+      // #######Traversing HTML in jquery######//
+
+      // var elm = $("#span1").parent();
+      // elm.css("border","1px solid red");
+
+      //       var elm = $("#span1").parents();
+      //     elm.css("border","1px solid red");
+
+      // var elm = $("#span1").parentsUntil("body");
+      // elm.css("border","1px solid red");
+
+      // var elm = $("#list").children();
+      // elm.css("border","1px solid red");
+
+      // var elm = $("#list").find("#span2");
+      // elm.css("border","1px solid red");
+
+      // var elm = $("#item1").siblings();
+      // elm.css("border","1px solid red");
+
+
+      // var elm = $("#item1").next().next();
+      // elm.css("border","1px solid red");
+
+      // var elm = $("#item1").nextAll();
+      // elm.css("border","1px solid red");
+
+      // var elm = $("#item1").nextUntil();
+      // elm.css("border","1px solid red");
+
+      // var elm = $("#item1").prevAll();
+      // elm.css("border","1px solid red");
+
+      // #######conflict in jquery######//
+      
+
+      // $("#btn").click(function () {
+      //   $("#para").text("text changed");
+      // });
+      
+      
+      //  $.noConflict();
+      // jQuery("#btn").click(function () {
+      //   jQuery("#para").text("text changed");
+      // });
+      
+      // var jq = $.noConflict();
+      // jq("#btn").click(function () {
+      //   jq("#para").text("text changed");
+      // });
+
+      // ######End of jquery#######//
+
+
+
+
+    </script>
+  </body>
+</html>
